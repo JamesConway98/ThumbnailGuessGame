@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class GameSetup implements ButtonPressedListener, MouseListener {
 
-    public static final int NO_OF_THUMBNAILS = 5, TN_HEIGHT = 290, TN_WIDTH = 435;
+    public static final int NO_OF_THUMBNAILS = 5, TN_HEIGHT = 220, TN_WIDTH = (int)(TN_HEIGHT*1.778); //This keeps the ratio of 1920/1080
 
     private boolean completionWait = false;
 

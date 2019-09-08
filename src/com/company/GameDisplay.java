@@ -18,6 +18,8 @@ public class GameDisplay extends JPanel {
         ArrayList<Thumbnail> tnailsCopy = new ArrayList<>(tnails);
         int row = 0;
 
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
         for(int i = 0; i <= GameSetup.NO_OF_THUMBNAILS; i++) {
             //stops adding row on first pass
             if (i > 1 && i % COLUMNS == 0)
@@ -27,7 +29,7 @@ public class GameDisplay extends JPanel {
             //This is the index of the randomly picked thumbnail
             int index = tnails.indexOf(tnailsCopy.get(random));
 
-            tnails.get(index).setX((i % COLUMNS) * (1600/COLUMNS) + 100);
+            tnails.get(index).setX((i % COLUMNS) * (screenSize.width/COLUMNS) + 50);
             tnails.get(index).setY(row * (tnails.get(0).getHeight() + 25) + 50);
 
             tnailsCopy.remove(random);
@@ -77,8 +79,10 @@ public class GameDisplay extends JPanel {
             }
         }
 
+        g.setFont(new Font("TimesRoman", Font.BOLD, 35));
+        g.drawString("Video Title: " + vidTitle, 150, 650);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 28));
-        g.drawString(vidTitle, 250, 750);
-        g.drawString("Score = " + currentScore + " In a row " + inARow, 250, 850);
+        g.drawString("Guess The Thumbnail!", 150, 800);
+        g.drawString("Score = " + currentScore + " In a row " + inARow, 150, 850);
     }
 }
