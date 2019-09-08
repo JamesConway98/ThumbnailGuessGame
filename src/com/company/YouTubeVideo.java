@@ -1,6 +1,6 @@
 package com.company;
 
-import org.apache.commons.text.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.IOException;

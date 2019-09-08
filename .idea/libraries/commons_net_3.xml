@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="commons-net-3">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/commons-net-3.6-bin/commons-net-3.6/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/commons-net-3.6-bin/commons-net-3.6" />
+    </SOURCES>
+  </library>
+</component>
